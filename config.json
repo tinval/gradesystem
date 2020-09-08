@@ -1,0 +1,31 @@
+{
+   "course": "Analysis",
+   "database": {
+      "host": "mysql1.ethz.ch",
+      "user": "vbosshar",
+      "passwd": "",
+      "database": "vbosshar",
+      "tablename1": "analysis1",
+      "tablename2": "analysis2"
+   },
+   "exercises1": {
+      "total": 12,
+      "start": 0
+   },
+   "exercises2": {
+      "total": 12,
+      "start": 0
+   },
+   "edoz_file1": "BelegungenLerneinheit_401126107L_Herbstsemester_2020.txt",
+   "edoz_file2": "BelegungenLerneinheit_401126107L_Herbstsemester_2020.txt",
+   "path_results": "/userdata/programming/python/gradesystem/",
+   "bonus1": {
+      "low": 10,
+      "high": 60
+   },
+   "bonus2": {
+      "low": 10,
+      "high": 60
+   },
+   "semester2view": true 
+}

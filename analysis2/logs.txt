@@ -1,0 +1,7 @@
+
+Array
+2020-09-07 16:32:56: Please choose your name added 4 to student 04-713-327 for Serie1
+2020-09-07 16:37:26: Please choose your name added 3 to student 10-823-730 for Serie0
+2020-09-07 16:38:30: Please choose your name added 3 to student 04-713-327 for Serie1
+2020-09-07 16:38:34: Please choose your name added 3 to student 10-823-730 for Serie1
+2020-09-07 16:48:35: Johannes Hauber added 3 to student 18-936-054 for Serie0
