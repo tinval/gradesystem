@@ -18,7 +18,7 @@ print(cfg)
 # uncomment this to make load database from scratch instead of adding new students
 # cursor.execute("DROP TABLE " + cfg['database']['tablename2'])
 
-string_exercises = ', '.join(['Serie'+ str(serie+cfg['exercises']['start'])+ ' FLOAT DEFAULT NULL' for serie in range(cfg['exercises']['total'])])
+string_exercises = ', '.join(['Serie'+ str(serie+cfg['exercises2']['start'])+ ' FLOAT DEFAULT NULL' for serie in range(cfg['exercises2']['total'])])
 query = "CREATE TABLE IF NOT EXISTS " + cfg['database']['tablename2'] + " (leginr VARCHAR(255) PRIMARY KEY, vorname VARCHAR(255), nachname VARCHAR(255), kurz VARCHAR(255), comment VARCHAR(255) DEFAULT NULL, assistent VARCHAR(255) DEFAULT NULL, " + string_exercises + ")"
 cursor.execute(query)
 
