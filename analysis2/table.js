@@ -19,7 +19,7 @@ $('#searchAssistent').on('keyup', function () {
 
 var start = parseInt(document.getElementById("start").innerText);
 var total = parseInt(document.getElementById("total").innerText);
-var option = new Array(total - start);
+var option = new Array(total);
 var aa = 4;
 for(let i=0; i<option.length;i++){
 	    option[i] = [aa,'Serie' + (i+start)];

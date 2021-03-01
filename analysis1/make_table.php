@@ -7,7 +7,7 @@ while( $student = mysqli_fetch_assoc($resultSet) ) { ?>
 	<td><?php echo $student ['vorname']; ?></td>
 	<td><?php echo $student ['nachname']; ?></td>
 	<td><?php echo $student ['assistent']; ?></td>
-	<?php for ($serie = $config['exercises1']['start']; $serie < $config['exercises1']['total']-$config['exercises1']['start']; $serie++) {
+	<?php for ($serie = $config['exercises1']['start']; $serie < $config['exercises1']['total']+$config['exercises1']['start']; $serie++) {
             echo "<td>" . $student ['Serie' . $serie] . "</td>";
             }?>	
 	</tr>

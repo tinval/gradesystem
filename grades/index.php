@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"/>
 <style>
 table {
   font-family: arial, sans-serif;
@@ -65,12 +66,12 @@ function get_result( $Statement ) {
 				<td><?php echo $student ['assistent']; ?>
 				<?php
 				$sum1 = 0;
-				for ($serie = $config['exercises1']['start']; $serie < $config['exercises1']['total']-$config['exercises1']['start']; $serie++) {
+				for ($serie = $config['exercises1']['start']; $serie < $config['exercises1']['total']+$config['exercises1']['start']; $serie++) {
                                         echo "<td>" . $student ['Serie' . $serie] . "</td>";
                                         $sum1 += $student['Serie' . $serie];
 				}
 				echo "<td>" . $sum1 . "</td>";
-                                $bonus1 = min(max(($sum1 - $config['bonus1']['low'])/($config['bonus1']['high']-$config['bonus1']['low']),1),0) * 0.25;
+                                $bonus1 = round(min(max(($sum1 - $config['bonus1']['low'])/($config['bonus1']['high']-$config['bonus1']['low']),0),1) * 0.25, 2);
                                 echo "<td bgcolor='#FFA500'>" . $bonus1 . "</td>";
                                 $comment = $student['comment'];
 				if(!empty($comment)){echo "<td>". $comment . "</td>";};
@@ -83,15 +84,15 @@ function get_result( $Statement ) {
 			while ($student = array_shift($result)) { ?>
                                 <tr id="<?php echo $student ['leginr'];?>">
                                 <td><?php echo $config['course'] . " II" ?></td>
-				<td><?php echo $student ['assistent']; ?>
+				<td><?php echo $student ['assistent']; ?></td>
 				<?php
 				$sum2 = 0;
-				for ($serie = $config['exercises2']['start']; $serie < $config['exercises2']['total']-$config['exercises2']['start']; $serie++) {
+				for ($serie = $config['exercises2']['start']; $serie < $config['exercises2']['total']+$config['exercises2']['start']; $serie++) {
                                         echo "<td>" . $student ['Serie' . $serie] . "</td>";
                                         $sum2 += $student['Serie' . $serie];
 				}
 				echo "<td>" . $sum2 . "</td>";
-                                $bonus2 = min(max(($sum2 - $config['bonus2']['low'])/($config['bonus2']['high']-$config['bonus2']['low']),1),0) * 0.25;
+                                $bonus2 = min(max(($sum2 - $config['bonus2']['low'])/($config['bonus2']['high']-$config['bonus2']['low']),0),1) * 0.25;
                                 echo "<td bgcolor='#FFA500'>" . $bonus2 . "</td>";
                                 $comment = $student['comment'];
 				if(!empty($comment)){echo "<td>". $comment . "</td>";};
@@ -102,7 +103,6 @@ function get_result( $Statement ) {
         </div>
 	</br>
 <?php if($config['semester2view']){
-	echo "Hallo";
         echo 'Dein Bonus:  <b><div style="color:red; font-size:20px;background-color:#66CC66">' . round(($bonus1+$bonus2)/2, 2) . '</div></b>'; }?>
 </body>
 </html>

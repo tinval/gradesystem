@@ -19,7 +19,7 @@ df = pd.read_sql('select * from ' + cfg['database']['tablename1'],db)
 print(df)
 
 try:
-	filename2 = cfg['path_results'] + 'results' + time.strftime("%Y%m%d-%H%M%S") + '.csv'
+	filename2 = cfg['path_results'] + 'results_1_' + time.strftime("%Y%m%d-%H%M%S") + '.csv'
 	df.to_csv(filename2, index=False)
 except error as e:
 	print(e)

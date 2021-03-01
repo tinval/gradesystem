@@ -10,7 +10,7 @@ A primitive grade entering system
   - Enter the edoz file (you can leave the edoz file blank for the second semester if you do not yet have the data)
   - Add the lowest limit of solved exercises to still get zero bonus and add the minimal number to get the full bonus. This is separate for the first and the second semester and can be adjusted at any time
   - 'semester2view' specifies whether the total bonus (the mean of the two boni) is already shown. This probably makes more sense if the second semester already started
-- Copy the config.json alos to the folders 'analysis1', 'analysis2' and to 'grades'
+- Copy the config.json also to the folders 'analysis1', 'analysis2' and to 'grades'
 - Try 
 ```python
 python3 create_database1.py
@@ -23,7 +23,7 @@ Maybe you need to install additional libraries to let this command run. You can 
 See <https://blogs.ethz.ch/isgdmath/webpage-with-password/>
 - To stop the access to you 'config.json' from outside add to 'www/.htaccess' the following lines
 ```
-<Files ~ "\.inc$">  
+<Files ~ "\.json$">  
 Order Allow,Deny
 Deny from All
 </Files>

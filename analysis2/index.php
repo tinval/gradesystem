@@ -67,7 +67,7 @@ Mr Anderson
 					<th>vorname</th>
 					<th>nachname</th>
 					<th>assistent</th>
-					<?php for ($serie = $config['exercises2']['start']; $serie < $config['exercises2']['total']-$config['exercises2']['start']; $serie++) {
+					<?php for ($serie = $config['exercises2']['start']; $serie < $config['exercises2']['total']+$config['exercises2']['start']; $serie++) {
                                                 echo "<th>Serie" . $serie . "</th>";
 					}?>											
 				</tr>
